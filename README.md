@@ -1,2 +1,2 @@
-# grigoriannikitaworks.github.io
+# Григорьян Никита
 Проект №1
