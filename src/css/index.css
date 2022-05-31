@@ -62,9 +62,8 @@ table {
 	font-family: 'Amatic SC', cursive;
 }
 .nav__list > *{
-	display: inline;
+	display: inline-flex;
 	padding: 1em;
-	line-height: 60px;
 }
 .nav__list li a{
 	text-decoration: none;
@@ -160,6 +159,7 @@ table {
 }
 .about__resume{
 	margin-top: 2em;
+	margin-bottom: 1em;
 	padding: 1em;
 	background: none;
 	transition-duration: padding, padding-left, padding-right;
@@ -253,7 +253,7 @@ table {
 	height: 200px;
 	padding-top: 1em;
 }
-.cases__link{
+.cases__link-mobile{
 	margin: 1em;
 	color: #fff;
 	background: #59c7c8;
@@ -263,6 +263,22 @@ table {
 	transition-property: background, color, border;
 	transition-delay: .1s;
 	transition-duration: .2s;
+}
+.cases__link{
+	display: none;
+	margin: 1em;
+	color: #fff;
+	background: #59c7c8;
+	padding: 1em 2em;
+	border:none;
+	border-radius: 5px;
+	transition-property: background, color, border;
+	transition-delay: .1s;
+	transition-duration: .2s;
+}
+.cases__link-mobile:hover{
+	background:none;
+	color: #000;
 }
 .cases__link:hover{
 	background:none;
@@ -419,12 +435,14 @@ table {
 	font-weight: 900;
 	align-items: center;
 }
-.footer__input-title{
-	margin-left: 20%;
+.footer__input{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
-.footer__input-title-h2{
+.footer__input-title{
 	font-size: 3em;
-	margin-left: 3.8em;
+	text-align: center;
 	color: #fff;
 	text-shadow: #8e8e8e 0 0 10px;
 }
@@ -433,9 +451,13 @@ table {
 	align-items: center;
 	display: inline-flex;
 	flex-direction: column;
-	margin-left: 25%;
 	margin-top: 5em;
 	text-align: center;
+}
+.footer__input-area{
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
 }
 .footer__input-container input:not(:first-child){
 	margin-left: 2em;
@@ -453,6 +475,7 @@ table {
 	padding: 1em 2em;
 	border-radius: 9px;
 	opacity: .8;
+	align-self: center;
 	border: #000 1px solid;
 	transition-property: padding, opacity;
 	transition-delay: .2s;
@@ -471,4 +494,594 @@ table {
 	text-align: center;
 	padding: 1em;
 	margin-top: -4px;
+}
+/* Кнопка выпадающего списка */
+.dropbtn{
+	display: none;
+	background: none;
+	color: white;
+	font-size: 20px;
+	padding: 0px;
+	border: none;
+	line-height: 120px;
+  }
+  
+  /* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown{
+	position: relative;
+	display: inline-block;
+	list-style-type: none;
+ }
+  
+  /* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+ }
+  
+  /* Ссылки внутри выпадающего списка */
+.dropdown-content a{
+	color: black;
+	padding: 6px 16px;
+	text-decoration: none;
+	display: block;
+ }
+  
+  /* Изменение цвета выпадающих ссылок при наведении курсора */
+ .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {display: block;}
+  
+  /* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {background: none}
+@media (min-width : 1725px) and (max-width : 1980px){/*Широкий монитор*/
+	.about, .about__container, .skills, .skills__content, .cases, .cases__container, .cases__container,
+	.calculator, .calculator__container, .statistic, .review, .review__block, .footer__contacts{
+		height: auto;
+	}
+	html{
+		font-size: 20px;
+	}
+	.about__resume{
+		font-size: 1em;
+	}
+	.skills__description-1, .skills__description-2, .skills__description-3, .skills__description-4{
+		padding: 1em;
+	}
+	.cases__link-mobile{
+		display: none;
+	}
+	.cases__link{
+		display: block;
+	}
+	.skills__content{
+		margin: 2em 9em 0 9em;
+		padding-bottom: 1em;
+	}
+	.cases__link{
+		padding: 1.5em 4em;
+		font-size: .8em;
+	}
+	.cases__text{
+		padding-bottom: 2em;
+	}
+	.statistic__content{
+		margin: 4em 5em 0 5em;
+		padding-bottom: 1em;
+	}
+	.review__block{
+		margin-top: 4em;
+		margin-bottom: 0;
+		padding-bottom: 1em;
+	}
+	.footer__button{
+		font-size: 1em;
+		margin-bottom: 3em;
+	}
+	.footer__copyright{
+		font-size: 1.5em;
+	}
+}
+@media (min-width : 1425px) and (max-width : 1724px){/*Ноутбук*/
+	.about, .about__container, .skills, .skills__content, .cases, .cases__container, .cases__container,
+	.calculator, .calculator__container, .statistic, .review, .review__block, .footer__contacts{
+		height: auto;
+	}
+	.skills__content{
+		margin: 4em 5em 0 5em;
+		padding-bottom: 1em;
+	}
+	.wrapper__logo p{
+		font-size: 1.5em;
+	}
+	.about__content p{
+		font-size: 1.5em;
+	}
+	.about__resume{
+		font-size: 1em;
+	}
+	.cases__link-mobile{
+		display: none;
+	}
+	.cases__link{
+		display: block;
+	}
+	.statistic__content{
+		margin: 4em 5em 0 5em;
+		padding-bottom: 1em;
+	}
+	.review__block{
+		margin: 2em 20em 0 20em;
+		padding-bottom: 2em;
+	}
+	.review__block p{
+		font-size: 1.2em;
+	}
+	.footer__button{
+		font-size: 1em;
+		margin-bottom: 2em;
+	}
+	.footer__copyright{
+		font-size: 1.5em;
+	}
+}
+@media (min-width : 1025px) and (max-width : 1424px){/*Узкий монитор*/
+	body{
+		overflow-x: hidden;
+	}
+	.about__container, .about{
+		height: auto
+	}
+	.hero{
+		width: auto;
+		height: 600px;
+	}
+	.wrapper__logo p{
+		font-size: 1.2em;
+	}
+	.about__content{
+		font-size: 1.5em;
+		margin: 0 8em;
+	}
+	.about__resume{
+		font-size: 1em;
+	}
+	.about__resume:hover{
+		padding: 1em 10em;
+	}
+	.skills{
+		height: auto;
+	}
+	.skills__content{
+		font-size: 1.5em;
+		margin: 0 8em;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr
+	}
+	.cases__content, .cases, .cases__case-1, .cases__info, .cases__text{
+		height: auto;
+	}
+	.cases__description{
+		margin: 0 10em;
+		font-size: 1.5em;
+	}
+	.cases__text{
+		margin-top: 1em;
+		flex-direction: column;
+		font-size: 1.5em;
+	}
+	.cases__img{
+		width: auto;
+		height: 350px;
+		margin: 2em 8em;
+	}
+	.cases__owner{
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-around;
+		width: 80%;
+	}
+	.cases__website{
+		justify-self: center;
+		margin-left: 2em;
+		padding: 0;
+	}
+	.cases__link-mobile{
+		margin: 2em auto;
+		padding: 1.5em 6em;
+		align-self: center;
+		font-size: .8em;
+	}
+	.cases__info{
+		padding: 0px;
+		text-align: center;
+		padding-bottom: 1em;
+		margin: 0 5em;
+	}
+	.calculator{
+		height: auto;
+	}
+	.calculator__container{
+		margin: 0 auto;
+		height: auto;
+	}
+	.calculator__type p, .calculator__design p, .calculator__adaptability p{
+		text-align: center;
+		margin: 0;
+	}
+	.statistic__content{
+		grid-template-columns: 1fr 1fr;
+		margin: 0 auto;
+		padding: 0 100px;
+		font-size: 2em;
+		grid-auto-rows: 200px;
+	}
+	.statistic__description{
+		padding: 2em;
+	}
+	.review{
+		height: auto;
+		font-size: 2em;
+	}
+	.review__block{
+		margin: 2em 4em 0 4em;
+		padding-bottom: 1em;
+	}
+	.footer__contacts, .footer{
+		background: url(../img/footer/background.jpg) fixed center/cover no-repeat;
+		width: auto;
+		height: auto;
+		font-size: 1.1em;
+	}
+	.footer__contacts{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.footer__vidgets{
+		display: inline-flex;
+		margin: 2em auto;
+	}
+	.footer__input-content{
+		margin: 0 auto;
+		display: block;
+	}
+	.footer__input-container{
+		margin: 2em auto;
+	}
+	.footer__vidget-2{
+		margin: 0 1em;
+	}
+	.footer__input-title{
+		display: inline-block;
+		justify-content: center;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.footer__input-container input:not(:first-child){
+		margin: 0 auto;
+	}
+	#footer__msg{
+		width: 650px;
+	}
+	.footer__button:hover{
+		padding: 1em 6em;
+	}
+	.footer__input-content{
+		padding-bottom: 1em;
+	}
+}
+@media (min-width : 768px) and (max-width : 1024px) {/*Планшет*/
+	body{
+		font-size: 10px;
+		overflow-x: hidden;
+	}
+	.wrapper{
+		position: static;
+		height: 120px;
+	}
+	.nav{
+		display: flex;
+		align-items: center;
+	}
+	.nav__list{
+		padding:.5em;
+		text-align: center;
+	}
+	.nav__list > *{
+		font-size: 3em;
+		padding: 0 .5em;
+	}
+	.about__container, .about{
+		height: auto
+	}
+	.hero{
+		width: auto;
+		height: 600px;
+	}
+	.hero__title{
+		font-size: 1.5em;
+	}
+	.about__content{
+		font-size: 2em;
+		margin: 0 4em;
+	}
+	.about__resume:hover{
+		padding: 1em 8em;
+	}
+	.skills{
+		height: auto;
+	}
+	.skills__content{
+		font-size: 2em;
+		margin: 0 5em;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr
+	}
+	.cases__content, .cases, .cases__case-1, .cases__info, .cases__text{
+		height: auto;
+	}
+	.cases__description{
+		margin: 0 10em;
+		font-size: 1.5em;
+	}
+	.cases__text{
+		margin-top: 1em;
+		flex-direction: column;
+		font-size: 1.5em;
+	}
+	.cases__img{
+		width: auto;
+		height: 250px;
+		margin: 2em 8em;
+	}
+	.cases__owner{
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-around;
+		width: 80%;
+	}
+	.cases__website{
+		justify-self: center;
+		margin-left: 2em;
+		padding: 0;
+	}
+	.cases__link-mobile{
+		margin: 2em auto;
+		padding: 1.5em 6em;
+		align-self: center;
+	}
+	.cases__info{
+		padding: 0px;
+		text-align: center;
+		padding-bottom: 1em;
+	}
+	.calculator{
+		height: auto;
+	}
+	.calculator__container{
+		margin: 0 auto;
+		height: auto;
+	}
+	.calculator__type p, .calculator__design p, .calculator__adaptability p{
+		text-align: center;
+		margin: 0;
+	}
+	.statistic__content{
+		grid-template-columns: 1fr 1fr;
+		margin: 0 auto;
+		padding: 0 100px;
+		font-size: 2em;
+		grid-auto-rows: 200px;
+	}
+	.statistic__description{
+		padding: 2em;
+	}
+	.review{
+		height: auto;
+		font-size: 2em;
+	}
+	.review__block{
+		margin: 2em 4em 0 4em;
+		padding-bottom: 1em;
+	}
+	.footer__contacts, .footer{
+		background: url(../img/footer/background.jpg) fixed center/cover no-repeat;
+		width: auto;
+		height: auto;
+		font-size: 1.1em;
+	}
+	.footer__contacts{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.footer__vidgets{
+		display: inline-flex;
+		margin: 2em auto;
+	}
+	.footer__input-content{
+		margin: 0 auto;
+		display: block;
+	}
+	.footer__input-container{
+		margin: 2em auto;
+	}
+	.footer__vidget-2{
+		margin: 0 1em;
+	}
+	.footer__input-title{
+		display: inline-block;
+		justify-content: center;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.footer__input-container input:not(:first-child){
+		margin: 0 auto;
+	}
+	#footer__msg{
+		width: 300px;
+	}
+	.footer__button:hover{
+		padding: 1em 6em;
+	}
+	.footer__input-content{
+		padding-bottom: 1em;
+	}
+}
+@media (max-width: 767px){/*Мобильное меню*/
+	body{
+		font-size: 10px;
+		overflow-x: hidden;
+	}
+	.nav{
+		width: 50%;
+	}
+	.nav__list{
+		display: none;
+	}
+	.dropbtn{
+		display: inline;
+	}
+	.wrapper__logo p{
+		font-size: 3em;
+		margin-top: 1em;
+		line-height: 20px;
+		letter-spacing: 0px;
+	}
+	.wrapper{
+		position: static;
+		height: 120px;
+	}
+	.about__container, .about{
+		height: auto
+	}
+	.hero{
+		width: auto;
+		height: auto;
+	}
+	.about__content{
+		margin: 0 3em;
+	}
+	.about__resume:hover{
+		padding: 1em 5em;
+	}
+	.skills{
+		height: auto;
+		font-size: 1.5em;
+	}
+	.skills__content{
+		margin: 0 5em;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr
+	}
+	.cases__content, .cases, .cases__case-1, .cases__info, .cases__text{
+		height: auto;
+		font-size: 1.1em;
+	}
+	.cases__description{
+		margin: 0 8em;
+		font-size: 1.2em;
+	}
+	.cases__text{
+		flex-direction: column;
+	}
+	.cases__img{
+		width: auto;
+		height: 200px;
+		margin: 2em 5em;
+	}
+	.cases__owner{
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-around;
+		width: 80%;
+	}
+	.cases__website{
+		justify-self: center;
+		margin-left: 2em;
+		padding: 0;
+	}
+	.cases__link-mobile{
+		margin: 1em auto;
+		padding: 1em 2em;
+		align-self: center;
+	}
+	.cases__info{
+		padding: 0px;
+		text-align: center;
+		padding-bottom: 1em;
+	}
+	.calculator{
+		height: auto;
+	}
+	.calculator__container{
+		margin: 0 auto;
+		height: auto;
+	}
+	.statistic__content{
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		margin: 2em auto;
+	}
+	.statistic__description{
+		padding: 2em;
+	}
+	.review{
+		height: auto;
+	}
+	.review__block{
+		margin: 2em 2.5em 0 2.5em;
+		padding-bottom: 1em;
+	}
+	.review__block p{
+		font-size: 1.5em;
+	}
+	.footer__contacts, .footer{
+		background: url(../img/footer/background.jpg) fixed center/cover no-repeat;
+		width: auto;
+		height: auto;
+	}
+	.footer__contacts{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.footer__vidgets{
+		display: inline-flex;
+		margin: 2em auto;
+	}
+	.footer__input-content{
+		margin: 0 auto;
+		display: block;
+	}
+	.footer__input-container{
+		margin: 2em auto;
+	}
+	.footer__vidget-2{
+		margin: 0 1em;
+	}
+	.footer__input-title{
+		display: inline-block;
+		justify-content: center;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.footer__input-container input:not(:first-child){
+		margin: 0 auto;
+	}
+	#footer__msg{
+		width: 300px;
+	}
+	.footer__button:hover{
+		padding: 1em 6em;
+	}
+	.footer__input-content{
+		padding-bottom: 1em;
+	}
 }
