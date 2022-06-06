@@ -1,0 +1,47 @@
+.popup{
+    display: none;
+    position: relative;
+    text-align: center;
+    background-color: aquamarine;
+    border: 2px solid #000;
+    margin: 0 30%;
+    animation: popup-animation 1s ease forwards;
+}
+.popup-header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    padding: .5em;
+}
+.select{
+    border-radius: 5px;
+    font-size: 1.2em;
+    border-color: #b8b8b8;
+}
+.popup__body{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 2em 0;
+}
+.close:hover{
+    cursor: pointer;
+}
+
+.select{
+    margin: .5em 5em;
+}
+.popup__footer{
+    font-size: 1.5em;
+    padding: .5em;
+}
+@keyframes popup-animation {
+    from{
+        top: -300px;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        top: 0;
+    }
+}
