@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <title>Task1</title>
 </head>
 <body>
@@ -22,12 +23,12 @@
             </div>
             <nav class="nav"><!--Навигационное меню-->
                 <ul class="nav__list">
-                    <li><a href="/">Обо мне</a></li>
-                    <li><a href="/">Услуги</a></li>
-                    <li><a href="/">Кейсы</a></li>
-                    <li><a href="/">Прайс</a></li>
-                    <li><a href="/">Отзывы</a></li>
-                    <li><a href="/">Контакты</a></li>
+                    <li><a href="#nav-link-1" class="nav__link">Обо мне</a></li>
+                    <li><a href="#nav-link-2" class="nav__link">Услуги</a></li>
+                    <li><a href="#nav-link-3" class="nav__link">Кейсы</a></li>
+                    <li><a href="#nav-link-4" class="nav__link">Прайс</a></li>
+                    <li><a href="#nav-link-5" class="nav__link">Отзывы</a></li>
+                    <li><a href="#nav-link-6" class="nav__link">Контакты</a></li>
                 </ul>
                 <div class="nav__menu">
                     <div class="dropdown">
@@ -59,7 +60,7 @@
         <div class="about"><!--Рассказываем о себе-->
             <div class="about__container">
                 <div class="about__title">
-                    <h2 class="about__h2">Обо мне</h2>
+                    <h2 class="about__h2"><a name="nav-link-1">Обо мне</a></h2>
                 </div>
                 <img src="img/about/icon.png" alt="icon" class="about__icon">
                 <div class="about__content">
@@ -71,7 +72,7 @@
         </div>
         <div class="skills">
             <div class="skills__title">
-                <h2 class="skills__h2">Что я умею</h2>
+                <h2 class="skills__h2"><a name="nav-link-2">Что я умею</a></h2>
             </div>
             <div class="skills__content"><!--Тут будут гриды-->
                 <div class="skills__description-1">
@@ -107,7 +108,7 @@
         <div class="cases">
             <div class="cases__container">
                 <div class="cases__title">
-                    <h2 class="cases__h2">Кейсы</h2>
+                    <h2 class="cases__h2"><a name="nav-link-3">Кейсы</a></h2>
                 </div>
                 <div class="cases__description">
                     <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
@@ -140,43 +141,43 @@
         <div class="calculator">
             <div class="calculator__container">
                 <div class="calculator__title">
-                    <h2 class="calculator__h2">Расчёт стоимости</h2>
+                    <h2 class="calculator__h2"><a name="nav-link-4">Расчёт стоимости</a></h2>
                 </div>
                 <div class="calculator__type"><!--Тут выбираем тип сайта-->
                     <p>Тип сайта</p>
                     <select value="type" class="calculator__select">
-                        <option value="disabled" disabled selected>Выберите пункт...</option>
-                        <option value="opt1">Сайт-визитка</option>
-                        <option value="opt2">Корпоративный сайт</option>
-                        <option value="opt3">Вики сайт</option>
-                        <option value="opt4">Web-сервис</option>
-                        <option value="opt5">Одностраничный сайт</option>
+                        <option disabled selected>Выберите пункт...</option>
+                        <option value="500">Сайт-визитка</option>
+                        <option value="700">Корпоративный сайт</option>
+                        <option value="550">Вики сайт</option>
+                        <option value="870">Web-сервис</option>
+                        <option value="340">Одностраничный сайт</option>
                     </select>
                 </div>
                 <div class="calculator__design">
                     <p>Дизайн</p>
-                    <select value="design" class="calculator__select2">
+                    <select value="design" class="calculator__select">
                         <option value="disabled" disabled selected>Выберите пункт...</option>
-                        <option value="opt1">Дизайн 1</option>
-                        <option value="opt2">Дизайн 2</option>
-                        <option value="opt3">Дизайн 3</option>
-                        <option value="opt4">Дизайн 4</option>
-                        <option value="opt5">Дизайн 5</option>
+                        <option value="580">Дизайн 1</option>
+                        <option value="430">Дизайн 2</option>
+                        <option value="750">Дизайн 3</option>
+                        <option value="560">Дизайн 4</option>
+                        <option value="730">Дизайн 5</option>
                     </select>
                 </div>
                 <div class="calculator__adaptability">
                     <p>Адаптивность</p>
                     <select value="adaptability" class="calculator__select">
                         <option value="disabled" disabled selected>Выберите пункт...</option>
-                        <option value="opt1">Стандартный</option>
-                        <option value="opt2">Мобильный</option>
-                        <option value="opt2">Кроссплатформенный</option>
+                        <option value="2500">Стандартный</option>
+                        <option value="3800">Мобильный</option>
+                        <option value="4000">Кроссплатформенный</option>
                     </select>
                 </div>
                 <div class="calculator__results">
-                    <!--Место для скриптов-->
-                    <p>Сроки:</p>
-                    <p>Стоимость:</p>
+                    <input type="submit" class="calculator__sub">
+                    <div class="calculator__out-1"></div>
+                    <div class="calculator__out-2"></div>
                 </div>
             </div>
         </div>
@@ -189,28 +190,28 @@
                     <div class="statistic__description">
                         <figure>
                             <img src="img/statistic/icons/smile.png" alt="smile" class="statistic__img">
-                            <figcaption>120</figcaption><!--Нужен скрипт для анимации-->
+                            <figcaption data-num= "120" class="statistic__figcap">0</figcaption><!--Нужен скрипт для анимации-->
                         </figure>
                         <p>Довольных клиентов</p>
                     </div>
                     <div class="statistic__description">
                         <figure>
                             <img src="img/statistic/icons/bracets.png" alt="bracets" class="statistic__img">
-                            <figcaption>4.600</figcaption><!--Нужен скрипт для анимации-->
+                            <figcaption data-num= "460" class="statistic__figcap">0</figcaption><!--Нужен скрипт для анимации-->
                         </figure>
                         <p>Часов работы</p>
                     </div>
                     <div class="statistic__description">
                         <figure>
                             <img src="img/statistic/icons/check-mark.png" alt="check-mark" class="statistic__img">
-                            <figcaption>340</figcaption><!--Нужен скрипт для анимации-->
+                            <figcaption data-num= "340" class="statistic__figcap">0</figcaption><!--Нужен скрипт для анимации-->
                         </figure>
                         <p>Проектов завершено</p>
                     </div>
                     <div class="statistic__description">
                         <figure>
                             <img src="img/statistic/icons/cup.png" alt="cup" class="statistic__img">
-                            <figcaption>23</figcaption><!--Нужен скрипт для анимации-->
+                            <figcaption data-num= "23" class="statistic__figcap">0</figcaption><!--Нужен скрипт для анимации-->
                         </figure>
                         <p>Наград получено</p>
                     </div>
@@ -219,20 +220,43 @@
         </div>
         <div class="review">
             <div class="review__title">
-                <h2 class="review__h2">Отзывы</h2>
+                <h2 class="review__h2"><a name="nav-link-5">Отзывы</a></h2>
             </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/review/icon1.jpg" alt="icon1" class="review__block-icon">
+                    <div class="review__text">
+                        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                        <p><strong>Какой-то ноунейм</strong>, 15 годиков</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/review/icon1.jpg" alt="icon1" class="review__block-icon">
+                    <div class="review__text">
+                        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                        <p><strong>Какой-то ноунейм</strong>, 15 годиков</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/review/icon1.jpg" alt="icon1" class="review__block-icon">
+                    <div class="review__text">
+                        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                        <p><strong>Какой-то ноунейм</strong>, 15 годиков</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             <div class="review__block">
-                <img src="img/review/icon1.jpg" alt="icon1" class="review__block-icon">
-                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
-                <p><strong>Какой-то ноунейм</strong>, 15 годиков</p>
-            <!--Тут должен быт скрипт на переходы между блоками-->
             </div>
         </div>
     </main>
     <footer class="footer">
         <div class="footer__contacts">
             <div class="footer__title">
-                <h2 class="footer__h2">Мои контакты</h2>
+                <h2 class="footer__h2"><a name="nav-link-6">Мои контакты</a></h2>
             </div>
             <div class="footer__vidgets"><!--Тут будут гриды-->
                 <div class="footer__vidget-1">
@@ -278,5 +302,8 @@
             <p>Copyright&copy;2022 Григорьян Никита</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
