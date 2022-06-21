@@ -556,7 +556,7 @@ table {
 	width: 800px;
 	top: 0px;
 	left: 250px;
-	background-color: rgba(129, 129, 129, 0.8);
+	background-color: rgba(129, 129, 129, 0.9);
 	opacity: 0;
 	visibility: hidden;
 	top: -400px;
@@ -567,6 +567,7 @@ table {
 	visibility: visible;
 	top: 60px;
 	transition: all 1s;
+	z-index: 100;
 }
 .popup__body {
 	min-height: 100%;
@@ -581,11 +582,15 @@ table {
 	color: #fff
 }
 .popup__cancel {
-	position: absolute;
-	right: 30px;
+	float: right;
+	margin-right: 20px;
 	font-size: 2em;
 	color: #fff;
 	text-decoration: none;
+}
+.popup__cancel:hover {
+	color: #ff0000;
+	cursor: pointer;
 }
 .popup__text{
 	margin: 20px auto;
