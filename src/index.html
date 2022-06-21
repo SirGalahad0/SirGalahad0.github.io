@@ -15,7 +15,22 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <title>Task1</title>
 </head>
-<body>
+<body class="_locked">
+    <div id="preloader">
+        <div class="loader__square1"></div>
+    <div class="loader__square2"></div>
+    <div class="loader__square3"></div>
+    <div class="loader">
+        <div class="loader__wrapper">
+            <h1 id="loader__text">Загрузка</h1>
+            <div class="loader__points">
+                <div class="loader__item"><div class="loader__item-background"></div></div>
+                <div class="loader__item"><div class="loader__item-background"></div></div>
+                <div class="loader__item"><div class="loader__item-background"></div></div>
+            </div>
+        </div>
+    </div>
+    </div>
     <header><!--Шапка-->
         <div class="wrapper">
             <div class="wrapper__logo">
@@ -145,7 +160,7 @@
                 </div>
                 <div class="calculator__type"><!--Тут выбираем тип сайта-->
                     <p>Тип сайта</p>
-                    <select value="type" class="calculator__select">
+                    <select value="type" class="calculator__select type-select">
                         <option disabled selected>Выберите пункт...</option>
                         <option value="500">Сайт-визитка</option>
                         <option value="700">Корпоративный сайт</option>
@@ -156,7 +171,7 @@
                 </div>
                 <div class="calculator__design">
                     <p>Дизайн</p>
-                    <select value="design" class="calculator__select">
+                    <select value="design" class="calculator__select design-select">
                         <option value="disabled" disabled selected>Выберите пункт...</option>
                         <option value="580">Дизайн 1</option>
                         <option value="430">Дизайн 2</option>
@@ -167,7 +182,7 @@
                 </div>
                 <div class="calculator__adaptability">
                     <p>Адаптивность</p>
-                    <select value="adaptability" class="calculator__select">
+                    <select value="adaptability" class="calculator__select adaptability-select">
                         <option value="disabled" disabled selected>Выберите пункт...</option>
                         <option value="2500">Стандартный</option>
                         <option value="3800">Мобильный</option>
@@ -176,8 +191,8 @@
                 </div>
                 <div class="calculator__results">
                     <input type="submit" class="calculator__sub">
-                    <div class="calculator__out-1"></div>
-                    <div class="calculator__out-2"></div>
+                    <div class="calculator__out-1">Время работы обговаривается индивидуально</div>
+                    <div class="calculator__out-2">Стоимость:</div>
                 </div>
             </div>
         </div>
@@ -302,6 +317,25 @@
             <p>Copyright&copy;2022 Григорьян Никита</p>
         </div>
     </footer>
+    <div class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__title">Модальное окно</div>
+                <a href="#" class="popup__cancel">X</a>
+                <div class="popup__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maxime commodi ea ratione praesentium facilis dignissimos laudantium dolor nulla iusto. Molestiae temporibus modi totam aut, cum animi expedita voluptate odit.
+                    <br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores mollitia numquam, possimus, deleniti nesciunt ab unde facere, accusamus ad eius iste cupiditate consectetur modi nostrum. In corporis illo animi vel.
+                    <br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores mollitia numquam, possimus, deleniti nesciunt ab unde facere, accusamus ad eius iste cupiditate consectetur modi nostrum. In corporis illo animi vel.
+                </div>
+                <div class="popup__submit">
+                    <input type="text" name="1" id="" placeholder="Имя">
+                    <input type="text" name="2" id="" placeholder="Фамилия">
+                    <input type="text" name="3" id="" placeholder="Email">
+                    <input type="submit">
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/index.js"></script>

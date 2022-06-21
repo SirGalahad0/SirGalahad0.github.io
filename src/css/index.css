@@ -42,14 +42,14 @@ table {
 }
 .wrapper{
 	background: #018d8e;
-	display: flex;
+	display: none;
 	opacity: .8;
 	position: fixed;
 	width: 100%;
 	height: 60px;
 	justify-content: space-around;
 	font-size: 1.2em;
-	z-index: 10;
+	z-index: 8;
 }
 .wrapper__logo{
 	width: 20%;
@@ -549,6 +549,206 @@ table {
   
   /* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
 .dropdown:hover .dropbtn {background: none}
+
+.popup {
+	position: fixed;
+	height: 400px;
+	width: 800px;
+	top: 0px;
+	left: 250px;
+	background-color: rgba(129, 129, 129, 0.8);
+	opacity: 0;
+	visibility: hidden;
+	top: -400px;
+	transition: all 2s;
+}
+._active {
+	opacity: 1;
+	visibility: visible;
+	top: 60px;
+	transition: all 1s;
+}
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
+}
+.popup__title {
+	font-size: 2em;
+	display: inline;
+	color: #fff
+}
+.popup__cancel {
+	position: absolute;
+	right: 30px;
+	font-size: 2em;
+	color: #fff;
+	text-decoration: none;
+}
+.popup__text{
+	margin: 20px auto;
+	color: #fff;
+}
+/*Загрузочный экран*/
+.loader{
+    display: flex;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+.loader__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+    background: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    font-size: 5em;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    /*Анимации*/
+}
+#loader__text{
+    display: inline;
+    margin-right: 3px;
+    animation: load 3s ease forwards;
+    opacity: 0;
+}
+.loader__points{
+    display: flex;
+    margin-left: 3px;
+    margin-top: 35px;
+}
+.loader__item{
+    border: rgb(0, 0, 0) 3px solid;
+    background: none;
+    border-radius: 50%;
+    padding: 9px;
+    margin-left: 8px;
+    opacity: 0;
+    animation: load-points 3s linear infinite;
+}
+.loader__item:nth-child(1){
+    animation-delay: 1s;
+}
+.loader__item:nth-child(2){
+    animation-delay: 2s;
+}
+.loader__item:nth-child(3){
+    animation-delay: 3s;
+}
+@keyframes load{
+    from{
+    }to{
+        opacity: 1;
+    }
+}
+@keyframes load-points{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+    
+}
+@keyframes load-points-background{
+    from{
+
+    }to{
+        background: #000;
+    }
+}
+.preloader {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 15;
+	background: #fff;
+}
+.loader__item-background{
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+.loader__square1{
+    background: none;
+    z-index: 20;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border: #000 3px solid;
+    animation: square1 10s ease alternate infinite;
+}
+.loader__square2{
+    background: none;
+    z-index: 20;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border: #000 3px solid;
+    animation: square2 10s ease alternate infinite;
+}
+.loader__square3{
+    background: none;
+    z-index: 30;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    border: #000 3px solid;
+    animation: square3 10s ease alternate infinite;
+}
+._locked {
+	overflow: hidden;
+}
+@keyframes square1 {
+    from{
+        padding:0;
+        left: -300px;
+        top: -300px;
+        transform: rotate(0deg)
+    }to{
+        transform: rotate(1020deg);
+        left: 600px;
+        top: 600px;
+        margin-left: 5em;
+        padding: 5em;
+    }
+}
+@keyframes square2 {
+    from{
+        padding:0;
+        right: 300px;
+        top: -300px;
+        transform: rotate(0deg)
+    }to{
+        transform: rotate(1020deg);
+        right: -500px;
+        top: 400px;
+        margin-right: 5em;
+        padding: 5em;
+    }
+}
+@keyframes square3 {
+    from{
+        padding:0;
+        right: 600px;
+        bottom: 800px;
+        transform: rotate(0deg)
+    }to{
+        transform: rotate(-1020deg);
+        right: 1000px;
+        bottom: 100px;
+        margin-right: 5em;
+        padding: 5em;
+    }
+}
 @media (min-width : 1725px) and (max-width : 1980px){/*Широкий монитор*/
 	.about, .about__container, .skills, .skills__content, .cases, .cases__container, .cases__container,
 	.calculator, .calculator__container, .statistic, .review, .review__block, .footer__contacts{

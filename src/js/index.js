@@ -41,6 +41,38 @@ const swiper = new Swiper('.swiper', {
 });
 
 document.querySelector('.calculator__sub').addEventListener('click', () => {
-  let data = document.querySelector('.calculator__select').value;
-  document.querySelector('.calculator__out-2').innerHTML = data;
-})
+  let dataType = parseInt(document.querySelector('.type-select').value);
+  let dataDesign = parseInt(document.querySelector('.design-select').value);
+  let dataAdaptability = parseInt(document.querySelector('.adaptability-select').value);
+  const cost = dataType + dataDesign + dataAdaptability;
+  if (Number.isNaN(cost) == true) {
+    document.querySelector('.calculator__out-2').innerHTML = 'Введите корректные параметры !'
+  } else {
+    document.querySelector('.calculator__out-2').innerHTML = `Стоимость: ${cost}` + ` рублей`;
+  }
+});
+
+let popupTime = setTimeout(() => {
+  let popup = document.querySelector('.popup');
+  popup.classList.add('_active');
+}, 45 * 1000
+);
+
+document.querySelector('.popup__cancel').addEventListener('click', () => {
+  let popup = document.querySelector('.popup');
+  popup.classList.remove('_active');
+});
+
+let clientWidth = window.innerWidth;
+if (clientWidth <= 1024) {
+  clearTimeout(popupTime);
+};
+
+window.onload = function() {
+  setTimeout(() => {
+    document.getElementById('preloader').style.display = "none";
+    document.body.classList.remove('_locked');
+    let wrapper = document.querySelector('.wrapper');
+    wrapper.style.display = "flex";
+  }, 15 * 1000);
+};
