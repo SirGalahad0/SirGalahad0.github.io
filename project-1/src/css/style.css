@@ -2,10 +2,6 @@
 *,*::before,*::after {
   box-sizing: border-box;
 }
-/* Убираем внутренние отступы */
-ul[class],ol[class] {
-  padding: 0;
-}
 
 /* Убираем внешние отступы */
 body, h1, h2, h3, h4, p, ul[class], ol[class],li, figure, figcaption, blockquote, dl, dd {
@@ -26,6 +22,7 @@ body {
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],ol[class] {
   list-style: none;
+  padding-inline-start: 0;
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
@@ -144,7 +141,6 @@ body {
 /*Начало интро*/
 .intro {
     background: url(../img/intro-pic.jpg) center/cover no-repeat;
-    height: 100vh;
 }
 .intro__title {
     font-family: 'Roboto', sans-serif;
@@ -164,7 +160,7 @@ body {
 }
 .intro__buttons-list{
     display: flex;
-    padding-bottom: 300px;
+    padding-bottom: 25px;
     list-style-type: none;
 }
 .intro__button-get {
@@ -176,6 +172,7 @@ body {
     transition: .2s all;
 }
 .intro__link-get {
+    white-space: nowrap;
     text-decoration: none;
     font-size: 16px;
     line-height: 20px;
@@ -189,6 +186,7 @@ body {
     transition: .2s all;
 }
 .intro__link-take {
+    white-space: nowrap;
     text-decoration: none;
     color: #fff;
     font-size: 16px;
@@ -1088,10 +1086,7 @@ body {
 ._burger-active {
     background: #fff;
 }
-._burger-pos {
-    transition: .5s all;
-}
-/* Конец слежебных классов */
+/* Конец служебных классов */
 
 /* Начало медиа */
 @media screen and (min-width: 1249px) and (max-width: 1407px) {
@@ -1105,6 +1100,9 @@ body {
     }
 }
 @media screen and (min-width: 900px) and (max-width: 1061px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .header {
         position: absolute;
         width: 100%;
@@ -1178,7 +1176,10 @@ body {
         gap: 0 60px;
     }
 }
-@media screen and (min-width: 700px) and (max-width: 899px) {
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .header {
         position: absolute;
         width: 100%;
@@ -1310,6 +1311,9 @@ body {
     }
 }
 @media screen and (min-width:500px) and (max-width: 699px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .header {
         position: absolute;
         width: 100%;
@@ -1527,6 +1531,9 @@ body {
     }
 }
 @media screen and (max-width: 500px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .header {
         position: absolute;
         width: 100%;
@@ -1565,10 +1572,10 @@ body {
         font-size: 21px;
         max-width: 192px;
         line-height: normal;
-        margin-bottom: 0;
+        margin-bottom: 20px;
     }
     .intro__buttons-list {
-        padding-bottom: 20px;
+        padding-bottom: 50px;
     }
     .companies__title {
         padding-top: 60px;
@@ -1674,6 +1681,10 @@ body {
     }
     .integrate__title {
         font-size: 50px;
+    }
+    .trick__title-name {
+        line-height: normal;
+        font-size: 25px;
     }
     .integrate__content {
         margin-bottom: 20px;

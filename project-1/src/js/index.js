@@ -10,15 +10,26 @@ new Swiper('.slider-body', {
 
 document.querySelector('.burger').addEventListener('click', () => {
 
-    document.querySelector('.burger').classList.toggle('_burger-pos')
     let burgerSpan = document.querySelectorAll('.burger__line');
     burgerSpan.forEach(element => {
         element.classList.toggle('_burger-active');
     });
-
     let mobileMenu = document.querySelector('.header__mobile');
     let header = document.querySelector('.header');
     mobileMenu.classList.toggle('_active');
     document.body.classList.toggle('_locked');
     header.classList.toggle('_header-color');
+
+
+    document.querySelectorAll('.header__mobile-link').forEach(element => {
+        element.addEventListener('click', () => {
+            burgerSpan.forEach(element => {
+                element.classList.remove('_burger-active');
+            });
+            mobileMenu.classList.remove('_active');
+            document.body.classList.remove('_locked');
+            header.classList.remove('_header-color');
+        })
+    });
 });
+ 
