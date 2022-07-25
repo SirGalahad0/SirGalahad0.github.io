@@ -1,0 +1,292 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+  /* Начало шапки */
+.header {
+    background: #4A2B33;
+    height: 120px;
+}
+.header__nav-list {
+    display: flex;
+    padding-inline-start: 0;
+}
+.header__nav-item:not(:first-child) {
+    margin-left: 20px;
+}
+.header__nav-link {
+    font-size: 15px;
+    line-height: 24px;
+    color: rgb(210, 116, 135);
+    transition: .2s all;
+}
+.header__nav-link:hover,
+.header__nav-link:focus,
+.header__nav-link:active {
+    color: rgb(255, 143, 165);
+}
+.header__networks-link:not(:first-child) {
+    margin-left: 17px;
+}
+  /* Конец шапки */
+
+  /* Начало превью */
+.hero {
+    background: #4A2B33;
+    padding-bottom: 36px;
+}
+  /* Конец превью */
+
+/* Начало о нас */
+.about {
+    padding: 220px 0;
+    background: #F5F5F5;
+}
+.about__title {
+    font-family: 'Azeret Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    color: #222222;
+    margin-block: 0;
+}
+.about__text {
+    font-size: 32px;
+    line-height: 45px;
+    text-align: center;
+    color: #222222;
+}
+/* Конец о нас */
+
+/* Начало меню */
+.menu {
+    background: #E9E9E3;
+    padding: 120px 0;
+}
+.menu__title {
+    font-family: 'Azeret Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #6F6F64;
+}
+.menu__text {
+    font-size: 32px;
+    line-height: 45px;
+    color: #6F6F64;
+    max-width: 558px;
+    padding-right: 102px;
+}
+.menu__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.menu__button:not(:first-child) {
+    margin-top: 12px;
+}
+.menu__button {
+    font-size: 15px;
+    line-height: 24px;
+    color: #6F6F64;
+    text-align: center;
+    background: none;
+    border: 2px solid #6F6F64;
+    cursor: pointer;
+    transition: .2s all;
+}
+#food-menu {
+    padding: 17px 223px;
+}
+#drinks-menu {
+    padding: 17px 219px;
+}
+#takeaway-menu {
+    padding: 17px 202px;
+    font-size: 16px;
+}
+.menu__img {
+    display: none;
+}
+/* Конец меню */
+
+/* Начало информации */
+.info {
+    padding: 120px 0;
+    background: #AA9E54;
+}
+.info__block {
+    color: #fff;
+    text-align: center;
+}
+.info__block-title {
+    font-family: 'Azeret Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+}
+.info__block-content {
+    font-size: 25px;
+    line-height: 36px;
+}
+.second .first-end{
+    margin-block: 0;
+    padding-bottom: 35px;
+}
+.third .info__block-content {
+    max-width: 352px;
+    margin: 0 auto;
+}
+/* Конец информации */
+
+/* Начало фотографий */
+.photo {
+    padding: 152px 0 120px 0;
+}
+/* Конец фотографий */
+
+/* Начало описания */
+.desc {
+    background: #4A2B33;
+    padding: 120px 0;
+}
+.desc__title {
+    font-family: 'Azeret Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 47px;
+    line-height: 62px;
+    letter-spacing: 1px;
+    color: #D27487;
+    max-width: 413px;
+}
+.desc__content {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #D27487;
+    max-width: 595px;
+}
+/* Конец описания */
+
+/* Начало подвала */
+.footer {
+    padding: 52px 0 16px 0;
+}
+.footer__list {
+    display: flex;
+    margin-block-end: 7px;
+}
+.footer__list-item:not(:first-child) {
+    padding-left: 32px;
+}
+.footer__link {
+    font-size: 15px;
+    line-height: 22px;
+    color: #1F1F1F;
+    transition: .2s all;
+}
+.footer__link:hover,
+.footer__link:active,
+.footer__link:focus {
+    opacity: .75;
+}
+.footer__copyright {
+    padding-top: 10px;
+}
+.footer__copyright .footer__list-item {
+    font-size: 13px;
+    line-height: 20px;
+    color: #696969;
+}
+/* Конец подвала */
+/* Начало служебные классы */
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.hero-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1328px;
+}
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.menu-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.info-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.photo-wrapper {
+    display: grid;
+    max-width: 1328px;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 40px; 
+    grid-template-areas: 
+        "photo__vines photo__restaraunt"
+        "photo__cake photo__restaraunt"
+        ". ."; 
+}
+.desc-wrapper {
+    max-width: 1360px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.footer-wrapper {
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.photo__vines { 
+    grid-area: photo__vines; 
+}
+.photo__cake { 
+    grid-area: photo__cake; 
+}
+.photo__restaraunt { 
+    grid-area: photo__restaraunt; 
+}
+._menu-button-active {
+    color: #fff;
+    background: #6F6F64;
+    border: 2px solid #6F6F64;
+    border-radius: 0px;
+}
+._menu-img-active {
+    display: block;
+}
