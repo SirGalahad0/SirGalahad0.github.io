@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Latte Coffee</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="wrapper header-wrapper">
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="#menu" class="header__nav-link">Menu</a></li>
+                    <li class="header__nav-item"><a href="#info" class="header__nav-link">Info</a></li>
+                    <li class="header__nav-item"><a href="#!" class="header__nav-link">Booking</a></li>
+                </ul>
+            </nav>
+            <div class="nav__logo">
+                <img src="img/svg/caffe-log.svg" alt="logo">
+            </div>
+            <div class="header__networks">
+                <a href="#!" class="header__networks-link">
+                    <img src="img/svg/mail-ico.svg" alt="mail">
+                </a>
+                <a href="#!" class="header__networks-link">
+                    <img src="img/svg/facebook-ico.svg" alt="facebook">
+                </a>
+                <a href="#!" class="header__networks-link">
+                    <img src="img/svg/instagram-ico.svg" alt="instagram">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="hero">
+            <div class="wrapper hero-wrapper">
+                <img src="img/preview-pic.jpg" alt="preview">
+            </div>
+        </div>
+        <div class="about" id="about">
+            <div class="wrapper about-wrapper">
+                <h2 class="about__title">About Us</h2>
+                <p class="about__text">Tucked away in the corner of Wellington, Latte Cafe is a local neighbourhood cafe and bar. Latte is all about doing what we love, in a city that we love. We keep stocked with local produce and pastries. Bring your family for a bite, or meet your friends for a coffee or warm drink.</p>
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <div class="wrapper menu-wrapper">
+                <div class="menu__content">
+                    <h2 class="menu__title">Menu</h2>
+                    <p class="menu__text">We change our menu every season. Here is what we are currently dishing up.</p>
+                    <div class="menu__buttons">
+                        <input type="button" value="Food Menu" class="menu__button _menu-button-active" id="food-menu" data-menu="foodImg">
+                        <input type="button" value="Drinks Menu" class="menu__button" id="drinks-menu" data-menu="drinksImg">
+                        <input type="button" value="Takeaway Menu" class="menu__button" id="takeaway-menu" data-menu="takeawayImg">
+                    </div>
+                </div>
+                <div class="menu__img _menu-img-active" id="foodImg">
+                    <img src="img/food-menu-pic.jpg" alt="food-menu">
+                </div>
+                <div class="menu__img" id="drinksImg">
+                    <img src="img/drinks-menu-pic.jpg" alt="food-menu">
+                </div>
+                <div class="menu__img" id="takeawayImg">
+                    <img src="img/takeaway-menu-pic.jpg" alt="food-menu">
+                </div>
+            </div>
+        </div>
+        <div class="info" id="info">
+            <div class="wrapper info-wrapper">
+                <div class="info__block">
+                    <h2 class="info__block-title">Location</h2>
+                    <p class="info__block-content">101 Cuba St,</p>
+                    <p class="info__block-content">Te Aro, Wellington</p>
+                </div>
+                <div class="info__block second">
+                    <h2 class="info__block-title">Hours</h2>
+                    <p class="info__block-content">Tuesday to Friday</p>
+                    <p class="info__block-content first-end">7AM - 3PM</p>
+                    <p class="info__block-content">Saturday to Sunday</p>
+                    <p class="info__block-content">8AM - 3PM</p>
+                </div>
+                <div class="info__block third">
+                    <h2 class="info__block-title">Mondays?</h2>
+                    <p class="info__block-content">We are closed on Mondays to reflect and refuel</p>
+                </div>
+            </div>
+        </div>
+        <div class="photo">
+            <div class="wrapper photo-wrapper">
+                <div class="photo__vines">
+                    <img src="img/vines-pic.jpg" alt="vines">
+                </div>
+                <div class="photo__cake">
+                    <img src="img/cake-pic.jpg" alt="cake">
+                </div>
+                <div class="photo__restaraunt">
+                    <img src="img/cafe-pic.jpg" alt="cafe">
+                </div>
+            </div>
+        </div>
+        <div class="desc">
+            <div class="wrapper desc-wrapper">
+                <div class="desc__title">Award winning cafe and bar.</div>
+                <div class="desc__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="wrapper footer-wrapper">
+            <ul class="footer__list">
+                <li class="footer__list-item"><a href="#header" class="footer__link">Home</a></li>
+                <li class="footer__list-item"><a href="#about" class="footer__link">About</a></li>
+                <li class="footer__list-item"><a href="#menu" class="footer__link">Menu</a></li>
+                <li class="footer__list-item"><a href="#info" class="footer__link">Info</a></li>
+                <li class="footer__list-item"><a href="#!" class="footer__link">Contact</a></li>
+                <li class="footer__list-item"><a href="#!" class="footer__link">Bookings</a></li>
+                <li class="footer__list-item"><a href="#!" class="footer__link">Privacy Policy</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__list-item"><a href="#!" class="footer__link">Style Guide</a></li>
+                <li class="footer__list-item"><a href="#!" class="footer__link">Licenses</a></li>
+                <li class="footer__list-item"><a href="#!" class="footer__link">Instructions</a></li>
+                <li class="footer__list-item"><a href="#!" class="footer__link">Changelog</a></li>
+                <li class="footer__list-item"><a href="#!" class="footer__link">Password</a></li>
+                <li class="footer__list-item"><a href="#!" class="footer__link">404</a></li>
+            </ul>
+            <div class="footer__copyright">
+                <ul class="footer__list">
+                    <li class="footer__list-item">© Latte Cafe 2022.</li>
+                    <li class="footer__list-item">Built by Nikolai Bain..</li>
+                    <li class="footer__list-item">Powered by Webflow</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
