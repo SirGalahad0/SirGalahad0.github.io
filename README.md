@@ -3,7 +3,7 @@
 
 Адаптивные сайты:
 
-sirgalahad0.github.io/oneflow-project/src/index-min.html
+https://sirgalahad0.github.io/oneflow-project/src/index-min.html
 Сайт предоставления услуг
 
 https://sirgalahad0.github.io/farmgrow-project/src/index-min.html
