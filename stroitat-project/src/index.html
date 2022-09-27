@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+    "title":"Стройтат Строительная Компания"
+})
+<body>
+    @@include('html/header.html', {})
+    <main>
+        <div class="hero">
+            <div class="wrapper">
+                <h1 class="hero__title">Профессиональный ремонт и отделка недвижимости «под ключ»</h1>
+                <p class="hero__text">с фиксированной датой и ценой по договору</p>
+                <p class="hero__text under">в г. Набережные Челны и пригороде</p>
+                <div class="hero__buttons">
+                    <input type="button" class="hero__button cost" value="Рассчитать стоимость">
+                    <input type="button" class="hero__button request" value="Оставить заявку">
+                </div>
+            </div>
+        </div>
+        <div class="repair">
+            <div class="wrapper repair-wrapper">
+                <div class="repair__content">
+                    <h2 class="repair__content-title"><span>РЕМОНТ —</span><br>ДЕЛО ОТВЕТСТВЕННОЕ</h2>
+                    <div class="repair__text">
+                        <p class="repair__text-paragraph">Вы хотите отремонтировать свой дом?<br>Мы поможем вам воплотить мечту.</p>
+                        <p class="repair__text-paragraph">Самый важный результат в нашей работе — репутация компании и счастливые обладатели комфортного жилья.</p>
+                    </div>
+                </div>
+                <div class="repair__img">
+                    <figure>
+                        <img src="files/img/repair-pic.jpg" alt="repair-pic">
+                        <figcaption>Посмотрите<br>наши работы</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="calc" id="calc">
+            <div class="wrapper calc-wrapper">
+                <div class="calc__main-content">
+                    <h2 class="calc__title">Посчитайте ремонт вашего дома</h2>
+                    <div class="calc__type">
+                        <p class="calc__type-title">Тип объекта</p>
+                        <div class="calc__type-body">
+                            <div class="calc__type-block type-active">Квартира новостройка</div>
+                            <div class="calc__type-block">Квартира вторичка</div>
+                            <div class="calc__type-block">Дом/коттедж</div>
+                            <div class="calc__type-block">Коммерция</div>
+                        </div>
+                    </div>
+                    <div class="calc__type">
+                        <p class="calc__type-title">Вид ремонта</p>
+                        <div class="calc__type-body">
+                            <div class="calc__type-block view-block view-active">Косметический</div>
+                            <div class="calc__type-block view-block">Капитальный</div>
+                            <div class="calc__type-block view-block">Дизайнерский</div>
+                        </div>
+                    </div>
+                    <div class="calc__square">
+                        <p class="calc__square-title">Площадь</p>
+                        <div class="calc__square-body">
+                            <div class="calc__square-flex-body">
+                                <div class="calc__square-container-slider">
+                                    <div class="calc__square-slider">
+                                        <div class="calc__slider-progress"></div>
+                                        <div class="calc__square-range-text">
+                                            <p class="calc__square-range range-min">20м<sup>2</sup></p>
+                                            <p class="calc__square-range range-max">200м<sup>2</sup></p>
+                                        </div>
+                                    </div>
+                                    <div class="calc__square-range-input">
+                                        <input type="range" class="calc__square-range-min" min="1" max="180" value="1">
+                                        <input type="range" class="calc__square-range-max" min="0" max="180" value="50">
+                                    </div>
+                                </div>
+                                <label class="calc__square-label">
+                                    <input type="number" name="current" max="200" value="30" class="calc__square-input input-max">
+                                    <span class="calc-square-label-text">м<sup>2</sup></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc__request">
+                        <div class="calc__tel">
+                            <p class="calc__tel-title">Ваш телефон</p>
+                        </div>
+                        <div class="calc__input-body">
+                            <input type="tel" name="tel" placeholder="+7-(777)-777-77-77" class="tel">
+                        </div>
+                        <div class="calc__button">
+                            <p class="calc__button-text">Нажимая на кнопку, Вы соглашаетесь с условиями <a href="#!">обработки персональных данных</a></p>
+                            <input type="button" value="Рассчитать">
+                        </div>
+                    </div>
+                </div>
+                <div class="calc__underlinks">
+                    <a href="#!" class="calc__underlink">У меня свой дизайн-проект</a>
+                    <a href="#!" class="calc__underlink">Нужна помощь специалиста</a>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="wrapper">
+                <div class="about__content">
+                    <h2 class="about__title">МЫ — КОМПАНИЯ<br>«СтройТат»</h2>
+                    <p class="about__paragraph">Доброго вам времени суток! Давайте знакомиться!</p>
+                    <p class="about__paragraph"><strong>Занимаемся ремонтом недвижимости любой сложности «под ключ»</strong></p>
+                    <p class="about__paragraph">Наша деятельность успешно распространяется в г. Набережные Челны.</p>
+                    <p class="about__paragraph">Мы всегда готовы предложить услуги по ремонту и отделке комфортного и уютного гнёздышка по готовому или индивидуальному проекту. Мы ориентируемся на качество и сроки ремонта, чтобы все наши клиенты остались довольны сотрудничеством и могли в полной мере насладиться комфортом в домах.</p>
+                    <p class="about__paragraph">Мы ремонтируем недвижимость применяя современные техники и технологии</p>
+                    <div class="about__categories">
+                        <figure class="about__category">
+                            <img src="files/img/letter.png" alt="letter">
+                            <figcaption>поэтапная работа</figcaption>
+                        </figure>
+                        <figure class="about__category">
+                            <img src="files/img/timer.png" alt="timer">
+                            <figcaption>по договору точно в срок</figcaption>
+                        </figure>
+                        <figure class="about__category">
+                            <img src="files/img/medal.png" alt="medal">
+                            <figcaption>многоуровневый контроль качества</figcaption>
+                        </figure>
+                        <figure class="about__category">
+                            <img src="files/img/money.png" alt="money">
+                            <figcaption>лучшая цена на рынке</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="about__qualities">
+                    <div class="about__quality">
+                        <p class="about__quality-num">2007</p>
+                        <p class="about__quality-scriptum">год основания компании</p>
+                    </div>
+                    <div class="about__quality">
+                        <p class="about__quality-num">250+</p>
+                        <p class="about__quality-scriptum">довольных клиентов</p>
+                    </div>
+                    <div class="about__quality">
+                        <p class="about__quality-num">200+</p>
+                        <p class="about__quality-scriptum">выполненных<br>ремонтов</p>
+                    </div>
+                    <div class="about__quality">
+                        <p class="about__quality-num">5</p>
+                        <p class="about__quality-scriptum">лет гарантии</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="works">
+            <div class="wrapper">
+                <h2 class="works__title">3 варианта ремонта на ваш выбор</h2>
+                <div class="works__body">
+                    <div class="works__block">
+                        <p class="works__block-title"><strong>хороший косметический ремонт</strong></p>
+                        <p class="works__block-paragraph">от 1000 руб./м<sup>2</sup></p>
+                        <div class="works__block-links">
+                            <div class="works__block-links-about">
+                                <h3 class="works__block-links-about-title">Подойдёт:</h3>
+                                <p class="works__block-links-about-paragraph">Чтобы освежить квартиру</p>
+                                <p class="works__block-links-about-paragraph">Для сдачи в аренду</p>
+                                <p class="works__block-links-about-paragraph">Для предпродажной подготовки</p>
+                            </div>
+                            <a href="#!" class="works__block-link">Посмотреть список работ</a>
+                            <a href="#!" class="works__block-link_big">заказать</a>
+                        </div>
+                    </div>
+                    <div class="works__block">
+                        <p class="works__block-title"><strong>стильный дизайнерский ремонт</strong></p>
+                        <p class="works__block-paragraph">от 1800 руб./м<sup>2</sup></p>
+                        <div class="works__block-links">
+                            <div class="works__block-links-about">
+                                <h3 class="works__block-links-about-title">Подойдёт:</h3>
+                                <p class="works__block-links-about-paragraph">Для авторского дизайна</p>
+                                <p class="works__block-links-about-paragraph">Для применения сложных технологий</p>
+                                <p class="works__block-links-about-paragraph">Для роскошной жизни</p>
+                            </div>
+                            <a href="#!" class="works__block-link">Посмотреть список работ</a>
+                            <a href="#!" class="works__block-link_big">заказать</a>
+                        </div>
+                    </div>
+                    <div class="works__block">
+                        <p class="works__block-title"><strong>серьёзный капитальный ремонт</strong></p>
+                        <p class="works__block-paragraph">от 1800 руб./м<sup>2</sup></p>
+                        <div class="works__block-links">
+                            <div class="works__block-links-about">
+                                <h3 class="works__block-links-about-title">Подойдёт:</h3>
+                                <p class="works__block-links-about-paragraph">Для ремонта новостроек</p>
+                                <p class="works__block-links-about-paragraph">Для ремонта коттеджа</p>
+                                <p class="works__block-links-about-paragraph">Чтобы полностью отремонтировать квартиру</p>
+                            </div>
+                            <a href="#!" class="works__block-link">Посмотреть список работ</a>
+                            <a href="#!" class="works__block-link_big">заказать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wslider">
+            <div class="wrapper">
+                <div class="wslider__text">
+                    <h2 class="wslider__title">наши работы</h2>
+                    <a href="#!" class="wslider__link">Смотреть все</a>
+                </div>
+                <div class="wslider__body">
+                    <div class="wslider__slider">
+                        <div class="wslider__slider-elem">
+                            <img src="files/img/wslider-background.jpg" alt="wslider-back">
+                            <div class="wslider__slider-elem-content">
+                                <h3 class="wslider__slider-elem-title">Ремонт 3-х комнатной квартиры</h3>
+                                <p class="wslider__slider-elem-p"><strong>Адрес объекта:</strong> МЖК Sunrice City</p>
+                                <p class="wslider__slider-elem-p"><strong>Площадь:</strong> 110м<sup>2</sup></p>
+                                <p class="wslider__slider-elem-p"><strong>Срок выполнения:</strong> 25 дней</p>
+                                <p class="wslider__slider-elem-p"><strong>Стоимость ремонта:</strong> 25 000 рублей</p>
+                                <input type="button" value="Подробнее" class="wslider__slider-elem-button">
+                                <p class="wslider__slider-elem-p">Подробнее</p>
+                            </div>
+                        </div>
+                        <div class="wslider__slider-elem">
+                            <img src="files/img/wslider-background.jpg" alt="wslider-back">
+                            <div class="wslider__slider-elem-content">
+                                <h3 class="wslider__slider-elem-title">Ремонт 3-х комнатной квартиры</h3>
+                                <p class="wslider__slider-elem-p"><strong>Адрес объекта:</strong> МЖК Sunrice City</p>
+                                <p class="wslider__slider-elem-p"><strong>Площадь:</strong> 110м<sup>2</sup></p>
+                                <p class="wslider__slider-elem-p"><strong>Срок выполнения:</strong> 25 дней</p>
+                                <p class="wslider__slider-elem-p"><strong>Стоимость ремонта:</strong> 25 000 рублей</p>
+                                <input type="button" value="Подробнее" class="wslider__slider-elem-button">
+                                <p class="wslider__slider-elem-p">Подробнее</p>
+                            </div>
+                        </div>
+                        <div class="wslider__slider-elem">
+                            <img src="files/img/wslider-background.jpg" alt="wslider-back">
+                            <div class="wslider__slider-elem-content">
+                                <h3 class="wslider__slider-elem-title"> Ремонт 3-х комнатной квартиры</h3>
+                                <p class="wslider__slider-elem-p"><strong> Адрес объекта:</strong> МЖК Sunrice City</p>
+                                <p class="wslider__slider-elem-p"><strong> Площадь:</strong> 110м<sup>2</sup></p>
+                                <p class="wslider__slider-elem-p"><strong> Срок выполнения:</strong> 25 дней</p>
+                                <p class="wslider__slider-elem-p"><strong> Стоимость ремонта:</strong> 250 000 рублей</p>
+                                <input type="button" value="Подробнее" class="wslider__slider-elem-button">
+                                <p class="wslider__slider-elem-p">Подробнее</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wslider__slider-prev">◀</div>
+                    <div class="wslider__slider-next">▶</div>
+
+                    <div class="wslider__slider-pagination">
+                        <div class="wslider__slider-indicator pagination-active"></div>
+                        <div class="wslider__slider-indicator"></div>
+                        <div class="wslider__slider-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scheme">
+            <div class="wrapper">
+                <h2 class="scheme__title">схема работы</h2>
+                <div class="scheme__body">
+                    <div class="scheme__block">
+                        <div class="scheme__block-num">01</div>
+                        <h3 class="scheme__block-title">Вы оставляете заявку</h3>
+                        <p class="scheme__block-text">Можете оставить заявку на сайте, позвонить или написать на нашу почту</p>
+                    </div>
+                    <div class="scheme__block">
+                        <div class="scheme__block-num">02</div>
+                        <h3 class="scheme__block-title">Мы организовываем встречу</h3>
+                        <p class="scheme__block-text">Сделаем все замеры, обсудим Ваши пожелания, порекомендуем подходящие материалы</p>
+                    </div>
+                    <div class="scheme__block">
+                        <div class="scheme__block-num">03</div>
+                        <h3 class="scheme__block-title">Мы подписываем договор</h3>
+                        <p class="scheme__block-text">Предоставляем Вам готовую смету, подписываем договор и мы приступаем к работе</p>
+                    </div>
+                    <div class="scheme__block">
+                        <div class="scheme__block-num">04</div>
+                        <h3 class="scheme__block-title">Мы приступаем к работе</h3>
+                        <p class="scheme__block-text">В течении 7 рабочих дней приступаем к ремонту, отправляем фото и видео отчеты</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="create">
+            <div class="create__body">
+                <div class="create__icons">
+                    <div class="wrapper">
+                        <img src="files/img/setsquare.png" alt="setsquare">
+                        <img src="files/img/very-small-arrow.svg" alt="very-small-arrow" class="create-arrow">
+                        <img src="files/img/instruments.png" alt="instruments">
+                        <img src="files/img/very-small-arrow.svg" alt="very-small-arrow" class="create-arrow">
+                        <img src="files/img/home.png" alt="home">
+                    </div>
+                </div>
+                <div class="create__content">
+                    <div class="wrapper">
+                        <h2 class="create__title">Сделай ремонт дома  вместе со СтройТат</h2>
+                        <p class="create__text">Созвонимся, встретимся и начнём...</p>
+                        <div class="create__content-data">
+                            <input type="tel" name="tel" id="create-tel" placeholder="Ваш телефон" class="tel">
+                            <input type="submit" id="tel-submit" value="Оставить заявку">
+                            <p class="create__content-data-scriptum">Нажимая на кнопку, Вы соглашаетесь с условиями <a href="#!">обработки персональных данных</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review">
+            <div class="wrapper">
+                <div class="review__title-block">
+                    <h2 class="review__title">отзывы</h2>
+                    <a href="#!" class="review__link">Смотреть все</a>
+                </div>
+                <div class="review__slider-body">
+                    <div class="review__slider-block">
+                        <div class="review__slider-block-content">
+                            <div class="review__slider-block-title">
+                                <h3 class="review__slider-title">Ремонт 3-х комнатной квартиры</h3>
+                            </div>
+                            <div class="review__slider-block-data">
+                                <p class="review__slider-customer"><strong>Заказчик:</strong><br>Иванов Иван Иванович</p>
+                                <p class="review__slider-adress"><strong>Адрес:</strong><br>МЖК Sunrice City</p>
+                            </div>
+                            <div class="review__slider-block-tusk">
+                                <p class="review__slider-under-title"><strong>Задача:</strong></p>
+                                <p class="review__slider-under-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</p>
+                            </div>
+                            <div class="review__slider-block-review">
+                                <p class="review__slider-under-title"><strong>Отзыв:</strong></p>
+                                <p class="review__slider-under-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</p>
+                            </div>
+                        </div>
+                        <div class="review__img">
+                            <img src="files/img/review-img.jpg" alt="review-img">
+                        </div>
+                    </div>
+                    <div class="review__slider-block">
+                        <div class="review__slider-block-content">
+                            <div class="review__slider-block-title">
+                                <h3 class="review__slider-title">Ремонт 3-х комнатной квартиры</h3>
+                            </div>
+                            <div class="review__slider-block-data">
+                                <p class="review__slider-customer"><strong>Заказчик:</strong><br>Иванов Иван Иванович</p>
+                                <p class="review__slider-adress"><strong>Адрес:</strong><br>МЖК Sunrice City</p>
+                            </div>
+                            <div class="review__slider-block-tusk">
+                                <p class="review__slider-under-title"><strong>Задача:</strong></p>
+                                <p class="review__slider-under-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</p>
+                            </div>
+                            <div class="review__slider-block-review">
+                                <p class="review__slider-under-title"><strong>Отзыв:</strong></p>
+                                <p class="review__slider-under-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</p>
+                            </div>
+                        </div>
+                        <div class="review__img">
+                            <img src="files/img/review-img.jpg" alt="review-img">
+                        </div>
+                    </div>
+                    <div class="review__slider-block">
+                        <div class="review__slider-block-content">
+                            <div class="review__slider-block-title">
+                                <h3 class="review__slider-title">Ремонт 3-х комнатной квартиры</h3>
+                            </div>
+                            <div class="review__slider-block-data">
+                                <p class="review__slider-customer"><strong>Заказчик:</strong><br>Иванов Иван Иванович</p>
+                                <p class="review__slider-adress"><strong>Адрес:</strong><br>МЖК Sunrice City</p>
+                            </div>
+                            <div class="review__slider-block-tusk">
+                                <p class="review__slider-under-title"><strong>Задача:</strong></p>
+                                <p class="review__slider-under-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</p>
+                            </div>
+                            <div class="review__slider-block-review">
+                                <p class="review__slider-under-title"><strong>Отзыв:</strong></p>
+                                <p class="review__slider-under-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</p>
+                            </div>
+                        </div>
+                        <div class="review__img">
+                            <img src="files/img/review-img.jpg" alt="review-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="review__slider-prev">◀</div>
+                <div class="review__slider-next">▶</div>
+            </div>
+        </div>
+        <div class="service">
+            <div class="wrapper">
+                <h2 class="service__title">услуги ремонта</h2>
+                <div class="service__body">
+                    <div class="service__block">
+                        <h3 class="service__block-title">Демонтажные работы в Набережных Челнах</h3>
+                        <p class="service__block-cost"><strong>от 100 ₽/м2</strong></p>
+                        <p class="service__block-about">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</p>
+                        <input type="button" value="Подробнее">
+                    </div>
+                    <div class="service__block">
+                        <h3 class="service__block-title">Демонтажные работы в Набережных Челнах</h3>
+                        <p class="service__block-cost"><strong>от 100 ₽/м2</strong></p>
+                        <p class="service__block-about">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</p>
+                        <input type="button" value="Подробнее">
+                    </div>
+                    <div class="service__block">
+                        <h3 class="service__block-title">Демонтажные работы в Набережных Челнах</h3>
+                        <p class="service__block-cost"><strong>от 100 ₽/м2</strong></p>
+                        <p class="service__block-about">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</p>
+                        <input type="button" value="Подробнее">
+                    </div>
+                    <div class="service__block medium-blocks">
+                        <h3 class="service__block-title">Демонтажные работы в Набережных Челнах</h3>
+                        <p class="service__block-cost"><strong>от 100 ₽/м2</strong></p>
+                        <p class="service__block-about">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</p>
+                        <input type="button" value="Подробнее">
+                    </div>
+                    <div class="service__block medium-blocks">
+                        <h3 class="service__block-title">Демонтажные работы в Набережных Челнах</h3>
+                        <p class="service__block-cost"><strong>от 100 ₽/м2</strong></p>
+                        <p class="service__block-about">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</p>
+                        <input type="button" value="Подробнее">
+                    </div>
+                    <div class="service__block medium-blocks">
+                        <h3 class="service__block-title">Демонтажные работы в Набережных Челнах</h3>
+                        <p class="service__block-cost"><strong>от 100 ₽/м2</strong></p>
+                        <p class="service__block-about">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</p>
+                        <input type="button" value="Подробнее">
+                    </div>
+                    <div class="service__block medium-blocks">
+                        <h3 class="service__block-title">Демонтажные работы в Набережных Челнах</h3>
+                        <p class="service__block-cost"><strong>от 100 ₽/м2</strong></p>
+                        <p class="service__block-about">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</p>
+                        <input type="button" value="Подробнее">
+                    </div>
+                    <a href="#!" class="service__block service-last-block">
+                        <h3 class="service__block-title">Посмотреть<br>всё</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="call" id="call">
+            <div class="wrapper">
+                <div class="call__block">
+                    <h2 class="call-title">Готовы обсудить ваш ремонт?</h2>
+                    <h3 class="call__block-title">Бесплатно вызовите нашего замерщика в удобное для вас время</h4>
+                    <p class="call__block-p">К вам на объект приедет наш специалист, который:</p>
+                    <p class="call__block-text">Сделает точный замер;</p>
+                    <p class="call__block-text">Подскажет по выбору материала;</p>
+                    <p class="call__block-text">Проконсультирует по видам работ;</p>
+                    <p class="call__block-text">Сориентуриет по стоимости и срокам;</p>
+                </div>
+                <div class="call__form">
+                    <p class="call__form-text"><strong>Заполните форму, мы перезвоним вам и согласуем дату и время визита специалиста</strong></p>
+                    <input type="tel" name="tel" id="call-tel" placeholder="Ваш телефон" class="tel">
+                    <input type="submit" value="перезвоните мне" id="call-sub">
+                    <p class="call__block-ps">Нажимая на кнопку, Вы соглашаетесь с условиями <a href="#!">обработки персональных данных</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="question">
+            <div class="wrapper">
+                <h2 class="question__title">Ответы на ваши вопросы</h2>
+                <div class="question__accordion">
+                    <p class="question__accordion-num">01</p>
+                    <p class="question__accordion-title"><strong>С чего лучше начать ремонт квартиры?</strong></p>
+                    <p class="question__accordion-figure">▲</p>
+                </div>
+                <p class="question__content">Ремонт квартиры чаще всего начинается с подготовительных или демонтажных работ. Вы всегда можете оставить заявку на сайте и мы подробно расскажем вам, с чего лучше начинать ремонт квартиры</p>
+                <div class="question__border"></div>
+                <div class="question__accordion">
+                    <p class="question__accordion-num">01</p>
+                    <p class="question__accordion-title"><strong>С чего лучше начать ремонт квартиры?</strong></p>
+                    <p class="question__accordion-figure">▲</p>
+                </div>
+                <p class="question__content">Ремонт квартиры чаще всего начинается с подготовительных или демонтажных работ. Вы всегда можете оставить заявку на сайте и мы подробно расскажем вам, с чего лучше начинать ремонт квартиры</p>
+                <div class="question__border"></div>
+                <div class="question__accordion">
+                    <p class="question__accordion-num">01</p>
+                    <p class="question__accordion-title"><strong>С чего лучше начать ремонт квартиры?</strong></p>
+                    <p class="question__accordion-figure">▲</p>
+                </div>
+                <p class="question__content">Ремонт квартиры чаще всего начинается с подготовительных или демонтажных работ. Вы всегда можете оставить заявку на сайте и мы подробно расскажем вам, с чего лучше начинать ремонт квартиры</p>
+                <div class="question__border"></div>
+                <div class="question__accordion">
+                    <p class="question__accordion-num">01</p>
+                    <p class="question__accordion-title"><strong>С чего лучше начать ремонт квартиры?</strong></p>
+                    <p class="question__accordion-figure">▲</p>
+                </div>
+                <p class="question__content">Ремонт квартиры чаще всего начинается с подготовительных или демонтажных работ. Вы всегда можете оставить заявку на сайте и мы подробно расскажем вам, с чего лучше начинать ремонт квартиры</p>
+                <div class="question__border"></div>
+                <div class="question__accordion">
+                    <p class="question__accordion-num">01</p>
+                    <p class="question__accordion-title"><strong>С чего лучше начать ремонт квартиры?</strong></p>
+                    <p class="question__accordion-figure">▲</p>
+                </div>
+                <p class="question__content">Ремонт квартиры чаще всего начинается с подготовительных или демонтажных работ. Вы всегда можете оставить заявку на сайте и мы подробно расскажем вам, с чего лучше начинать ремонт квартиры</p>
+                <div class="question__border"></div>
+            </div>
+        </div>
+    </main>
+    @@include('html/footer.html', {})
+    <script src="@js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+$maxWidth: 1920;
+@mixin adaptive-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+.wrapper {
+    padding: 0 20px;
+    margin: 0 auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    &._body-locked {
+        overflow: hidden;
+    }
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+input {
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+input[type="range"]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    background: #FF4C00;
+    pointer-events: auto;
+}
+input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    -moz-appearance: none;
+    background: #FF4C00;
+    pointer-events: auto;
+    border: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import "normalize.scss";
+@import "js-classes.scss";
+@import "header.scss";
+@import "hero.scss";
+@import "repair.scss";
+@import "calc.scss";
+@import "about.scss";
+@import "works.scss";
+@import "wslider.scss";
+@import "scheme.scss";
+@import "create.scss";
+@import "review.scss";
+@import "service.scss";
+@import "call.scss";
+@import "question.scss";
+@import "footer.scss";
+@import "media.scss";

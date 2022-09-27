@@ -1,0 +1,124 @@
+.footer {
+    padding-top: 100px;
+    background: #1D2228;
+    .wrapper {
+        .footer__main-content {
+            display: none;
+            .footer__main-block {
+                color: #fff;
+                .footer__main-title {
+                    font-weight: 400;
+                    @include adaptive-font(32 ,15);
+                    white-space: nowrap;
+                    line-height: 31px;
+                }
+                .footer__main-list-body {
+                    margin-top: 30px;
+                    border-top: 1px solid #FF4C00;
+                    .footer__main-list {
+                        padding-inline-start: 0;
+                        .footer__main-list-item {
+                            margin: 10px 0;
+                            a {
+                                line-height: 20px;
+                                color: #fff;
+                                text-decoration: underline;
+                                &:hover {
+                                    color: #FF4C00;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer__under-content {
+            .footer__logo {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                .footer__logo-img {
+                    margin-bottom: 28px;
+                }
+                .footer__logo-link {
+                    text-decoration-line: underline;
+                    color: #FF4C00;
+                    line-height: 20px;
+                    &:last-child {
+                        margin-top: 17px;
+                    }
+                }
+            }
+            .footer__navigation {
+                color: #fff;
+                margin: 30px 0;
+                .footer__navigation-title {
+                    font-size: 18px;
+                }
+                .footer__navigation-list {
+                    padding-inline-start: 0;
+                    .footer__navigation-item {
+                        margin: 2px;
+                        a {
+                            color: #fff;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+            .footer__benefits {
+                margin-bottom: 30px;
+                color: #fff;
+                line-height: 20px;
+                .footer__benefits-title {
+                    line-height: 23px;
+                    font-size: 18px;
+                }
+            }
+            .footer__contacts {
+                color: #fff;
+                .footer__contacts-title {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+                .footer__contacts-num {
+                    font-size: 24px;
+                    line-height: 28px;
+                    margin-block-end: 5px;
+                    color: #fff;
+                }
+                .footer__contacts-num-text {
+                    margin-block-start: 0;
+                    line-height: 19px;
+                    text-decoration-line: underline;
+                }
+                .footer__contacts-mail, .footer__contacts-whatsapp{
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                .footer__contacts-whatsapp {
+                    position: relative;
+                    padding-left: 36px;
+                    color: #fff;
+                    white-space: nowrap;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 24px;
+                        width: 24px;
+                        background: url(../files/img/whatsapp-ico.svg) center;
+                    }
+                }
+            }
+        }
+        .footer__ps {
+            font-weight: 500;
+            padding: 50px 0;
+            margin-block-end: 0;
+            line-height: 20px;
+            color: #6D7B8C;
+        }
+    }
+}
