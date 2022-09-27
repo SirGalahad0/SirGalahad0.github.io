@@ -1,0 +1,53 @@
+.service {
+    padding: 0 0 100px 0;
+    .wrapper {
+        .service__title {
+            text-transform: uppercase;
+            line-height: 46px;
+            @include adaptive-font(48, 36);
+        }
+        .service__body {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            .medium-blocks {
+                display: none;
+            }
+            .service__block {
+                background: #1D2228;
+                color: #fff;
+                padding: 20px;
+                .service__block-title {
+                    line-height: 130%;
+                    @include adaptive-font(24, 20);
+                }
+                .service__block-cost {
+                    line-height: 130%;
+                    font-size: 32px;
+                }
+                .service__block-about {
+                    line-height: 20px;
+                }
+                input {
+                    border: none;
+                    padding: 16px 30px;
+                    background: #FF4C00;
+                    color: #fff;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .service-last-block {
+                background: #fff;
+                border: 4px solid #FF4C00;
+                color: #000;
+                .service__block-title {
+                    line-height: 46px;
+                    @include adaptive-font(48, 36);
+                }
+            }
+        }
+    }
+}
