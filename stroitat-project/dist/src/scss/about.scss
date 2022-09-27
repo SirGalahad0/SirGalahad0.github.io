@@ -1,0 +1,41 @@
+.about {
+    margin-top: 105px;
+    padding: 100px 0 154px 0;
+    background: #1D2228;
+    color: #FFFFFF;
+    .about__title {
+        margin-block: 0;
+    }
+    .about__paragraph {
+        @include adaptive-font(20, 18);
+    }
+    .about__categories {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .about__qualities {
+        gap: 5vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        .about__quality {
+            .about__quality-num {
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 130%;
+                margin-block-end: 5px;
+            }
+            display: flex;
+            line-height: 130%;
+            border: 2px solid rgba(255, 76, 0, 1);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .about__quality-scriptum {
+            margin-block-end: 50px;
+        }
+    }
+}
