@@ -1,0 +1,97 @@
+.review {
+    padding: 0 0 100px 0;
+    .wrapper {
+        overflow: hidden;
+        position: relative;
+        .review__title-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .review__title {
+                font-weight: 700;
+                line-height: 46px;
+                text-transform: uppercase;
+                @include adaptive-font (48, 36);
+            }
+            .review__link {
+                line-height: 20px;
+                font-weight: 900;
+                color: #282828;
+                @include adaptive-font (20, 16);
+                padding: 16px 20px;
+                border: 2px solid #FF4C00;
+            }
+        }
+    }
+    .review__slider-body {
+        display: flex;
+        width: 300%;
+        transition: .5s all ease;
+        .review__slider-block {
+            margin: 0 52px;
+            background: #1D2228;
+            color: #fff;
+            padding: 0 40px;
+            .review__slider-block-content {
+                .review__slider-block-title {
+                    border-bottom: 1px solid #4F5F72;
+                    line-height: 31px;
+                    @include adaptive-font(32, 24);
+                }
+                .review__slider-block-data {
+                    border-bottom: 1px solid #4F5F72;
+                    .review__slider-customer, .review__slider-adress {
+                        @include adaptive-font(20, 18);
+                        line-height: 23px;
+                        strong {
+                            line-height: 26px;
+                            @include adaptive-font(24, 20);
+                        }
+                    }
+                }
+                .review__slider-block-tusk, .review__slider-block-review {
+                    display: flex;
+                    .review__slider-under-text {
+                        margin-left: 20px;
+                    }
+                }
+            }
+            .review__img {
+                margin: 0 auto;
+                position: relative;
+                height: 40vw;
+                margin-bottom: 40px;
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                }
+            }
+        }
+    }
+    .review__slider-prev, .review__slider-next {
+        position: absolute;
+        top: 50%;
+        background: #FF4C00;
+        color: #fff;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .review__slider-prev {
+        left: 20px;
+    }
+    .review__slider-next {
+        right: 20px;
+    }
+
+}
