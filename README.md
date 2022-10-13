@@ -9,6 +9,9 @@ https://sirgalahad0.github.io/oneflow-project/src/index-min.html
 https://sirgalahad0.github.io/farmgrow-project/src/index-min.html
 Вёрстка сайта для крипто-фермы 
 
+https://sirgalahad0.github.io/stroitat-project/dist/index.html
+SPA. Ремонт помещения
+
 Desktop:
 
 https://sirgalahad0.github.io/latte-cafe-project/src/index-min.html
