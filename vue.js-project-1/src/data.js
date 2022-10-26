@@ -1,0 +1,22 @@
+export const persons = [
+  { id: 1, name: 'Александр', age: '31', gender: 'мужской' },
+  { id: 2, name: 'Михаил', age: '15', gender: 'мужской' },
+  { id: 3, name: 'Никита', age: '19', gender: 'мужской' },
+  { id: 4, name: 'Майкл', age: '46', gender: 'мужской' },
+  { id: 5, name: 'Григорий', age: '21', gender: 'мужской' },
+  { id: 6, name: 'Вероника', age: '26', gender: 'женский' },
+  { id: 7, name: 'Анатолий', age: '53', gender: 'мужской' },
+  { id: 8, name: 'Николай', age: '8', gender: 'мужской' },
+  { id: 9, name: 'Анна', age: '18', gender: 'женский' },
+  { id: 10, name: 'Дмитрий', age: '27', gender: 'мужской' },
+  { id: 11, name: 'София', age: '42', gender: 'женский' },
+  { id: 12, name: 'Павел', age: '42', gender: 'мужской' },
+  { id: 13, name: 'Платон', age: '15', gender: 'мужской' },
+  { id: 14, name: 'Владимир', age: '19', gender: 'мужской' },
+  { id: 15, name: 'Маргарита', age: '22', gender: 'женский' },
+  { id: 16, name: 'Иван', age: '25', gender: 'мужской' },
+  { id: 17, name: 'Александра', age: '27', gender: 'женский' },
+  { id: 18, name: 'Станислав', age: '47', gender: 'мужской' },
+  { id: 19, name: 'Евгений', age: '34', gender: 'мужской' },
+  { id: 20, name: 'Мария', age: '26', gender: 'женский' }
+]
