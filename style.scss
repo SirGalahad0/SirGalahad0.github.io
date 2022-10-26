@@ -1,0 +1,35 @@
+body {background: #000;}
+#app {
+    background: #fff;
+    height: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    .app__block {
+        padding-bottom: 15px;
+        .err {
+            color: red;
+        }
+        .app__tip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    h1 {
+        display: inline;
+    }
+    .app__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        list-style-type: none;
+        padding-inline: 0;
+        li {
+            padding: 20px 10px;
+            margin: 15px;
+            border: 2px solid black;
+        }
+    }
+}
+
+.blue {
+    color: blue;
+}
