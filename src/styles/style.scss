@@ -1,0 +1,48 @@
+.header {
+    .header__title {
+        font-size: 20px;
+        span {
+            font-size: 16px;
+        }
+    }
+}
+ul {
+    list-style-type: none;
+}
+.card-body {
+    flex: 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
+.card-text, .card-title {
+    color: #000;
+}
+.slide-fade-enter-active {
+    transition: all .3s ease;
+  }
+  .slide-fade-enter-to {
+    transform: translateX(-10px);
+    opacity: 0;
+    visibility: hidden;
+  }
+.form-check-label {
+    span {
+        color: burlywood;
+        &:hover {
+            cursor: pointer;
+            color: green;
+        }
+    }
+}
+.page-body {
+    color: #000;
+}
+body{
+    color: #fff;
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,60,121,1) 100%, rgba(0,212,255,1) 100%);
+}
