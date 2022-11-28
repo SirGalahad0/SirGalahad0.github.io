@@ -6,6 +6,9 @@ Vue.js проекты:
 https://github.com/SirGalahad0/SirGalahad0.github.io/tree/main/vue.js-project-1/src
 Первое практическое задание
 
+https://github.com/SirGalahad0/SirGalahad0.github.io/tree/main/src
+Мой первый pet-проект
+
 Адаптивные сайты:
 
 https://sirgalahad0.github.io/oneflow-project/src/index-min.html
